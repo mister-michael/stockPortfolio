@@ -10,10 +10,10 @@ purchases = [
     ( 'GM', 200, '1-jul-1998', 56 )
 ]
 
-# for purchase in purchases:
-#     for company in stockDict:
-#         if company == purchase[0]:
-#             print(f"I purchased {stockDict[company]} stock for ${purchase[1] * purchase[3]}")
+for purchase in purchases:
+    for company in stockDict:
+        if company == purchase[0]:
+            print(f"I purchased {stockDict[company]} stock for ${purchase[1] * purchase[3]}")
 
 purchase_summary = {
 
@@ -26,8 +26,6 @@ for company in stockDict:
         if company == a:
             purchase_summary[company].append([b, c, d])
     
-print(purchase_summary)
-
 for company in purchase_summary:
     print(f"-----{company}-----")
     total_value = 0
